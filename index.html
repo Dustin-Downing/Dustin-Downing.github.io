@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Dustin Downing</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<!-- bootstrap js file must be loaded after the jquery above -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./angular.js"></script>
+	<script type="text/javascript">
+	// sandbox for javascript code
+
+	</script>
+
+</head>
+<body>
+	<div id="body" ng-app="myApp" ng-controller="MockController">
+		<h1>Welcome to Dustin's webpage sandbox</h1>
+		<!-- <notifications info="notifications"></notifications> -->
+<!-- manual input of code -->
+
+		<div ng-repeat="notification in notifications">
+			<div class="not-container">
+				<div class="not-divider"></div>
+				<div class="not-title">{{notification.title}}</div>
+				<div class="not-close">Close</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
