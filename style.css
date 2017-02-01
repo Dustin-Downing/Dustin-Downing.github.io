@@ -17,31 +17,51 @@ h1{
 	font-family: arial;
 	z-index: 1;
 }
+.carddemoBasicUsage .card-media {
+  background-color: #999999; }
 
-.not-container{
-	height: 45px;
-	position: fixed;
-	display: inline-block;
-	width: 300px;
-	background: #FFF;
-	border-radius: 7px;
-	border: 1px solid #adadad;
-	padding: 10px;
+.material-icons.orange600 { color: #FB8C00; }
+
+#main-tile{
+  padding-top: 150px;
+  margin:auto;
+}
+#main-tile md-card{
+  width: 485px;
 }
 
-.not-close{
-	float: right;
-	display: inline;
+.md-headline {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
 }
 
-.not-title{
-	text-align: left;
-	display: inline;
+md-card-title-text span{
+  text-align: center;
 }
 
-.not-divider{
-	height: 45px;
-	display: inline;
-	width: 1px;
-	background: #A0A0A0;
+.md-body-1, .md-subhead {
+  font-weight: 600;
+}
+
+.my-divider{
+  background-color: #fafafa;
+  height: 1px;
+  width: 81%;
+  margin: auto;
+  display: block;
+}
+
+.my-discription{
+  text-align: center;
+}
+
+.md-user-avatar{
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border:7px solid #fafafa;
 }

@@ -1,34 +1,57 @@
 <html>
 <head>
-	<title>Dustin Downing</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Dustin Downing</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 	<!-- bootstrap js file must be loaded after the jquery above -->
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 	<script type="text/javascript" src="./angular.js"></script>
 	<script type="text/javascript">
 	// sandbox for javascript code
 
 	</script>
-
 </head>
-<body>
-	<div id="body" ng-app="myApp" ng-controller="MockController">
-		<h1>Welcome to Dustin's webpage sandbox</h1>
-		<!-- <notifications info="notifications"></notifications> -->
-<!-- manual input of code -->
 
-		<div ng-repeat="notification in notifications">
-			<div class="not-container">
-				<div class="not-divider"></div>
-				<div class="not-title">{{notification.title}}</div>
-				<div class="not-close">Close</div>
-			</div>
-		</div>
-
-
-	</div>
+<body ng-app="HomePage">
+  <div ng-controller="AppCtrl" ng-cloak >
+    <md-content class="md-padding" layout-xs="column" layout="row">
+      <div id="main-tile">
+        <md-card md-theme="'dark-grey'" class=".md-whiteframe-14dp" md-theme-watch>
+          <img class="md-user-avatar" src="img/profile.jpg"/>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{header}}</span>
+              <span class="md-subhead">{{subHeader}}</span>
+            </md-card-title-text>
+          </md-card-title>
+          <div class="my-divider"></div>
+          <span class="my-discription">{{discription}}</span>
+          <md-card-content layout="row" layout-align="space-between">
+            <!-- <span class="my-discription">{{discription}}</span> -->
+            <!-- <div class="md-media-xl card-media"></div>
+            <md-card-actions layout="column">
+              <md-button class="md-icon-button" aria-label="Favorite">
+                <i class="material-icons orange600">face</i>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="Settings">
+                <i class="material-icons">face</i>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="Share">
+                <i class="material-icons">get_app</i>
+              </md-button>
+            </md-card-actions> -->
+          </md-card-content>
+        </md-card>
+      </div>
+    </md-content>
+  </div>
 </body>
 </html>
