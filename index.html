@@ -21,30 +21,30 @@
 </head>
 
 <body ng-app="HomePage" ng-controller="AppCtrl" ng-cloak >
-    <md-content id="MainContainer" class="md-padding" layout-xs="column" layout="row">
-      <div id="main-tile">
-        <md-card md-theme="'dark-grey'" class=".md-whiteframe-14dp" md-theme-watch>
-          <img class="md-user-avatar" src="img/profile.jpg"/>
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">{{header}}</span>
-              <span class="md-subhead">{{subHeader}}</span>
-            </md-card-title-text>
-          </md-card-title>
-          <div class="my-divider"></div>
-          <span class="my-discription">{{discription}}</span>
-          <div class="my-divider"></div>
-          <md-card-content layout="row" layout-align="space-between">
-            <md-button id="download" class="md-fab md-primary" aria-label="Download Resume">
-              <md-tooltip
-                md-direction="left">
-                Download Resume
-              </md-tooltip>
-              <i class="material-icons white600">get_app</i>
-            </md-button>
-          </md-card-content>
-        </md-card>
-      </div>
-    </md-content>
+  <md-content id="MainContainer" layout="row">
+    <div id="main-tile">
+      <md-card md-theme="'dark-grey'" class=".md-whiteframe-14dp" md-theme-watch>
+        <img class="md-user-avatar" src="img/profile.jpg"/>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{header}}</span>
+            <span class="md-subhead">{{subHeader}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <div class="my-divider"></div>
+        <span class="my-discription">{{discription}}</span>
+        <div class="my-divider"></div>
+        <md-card-content layout="row" layout-align="space-between">
+          <md-button id="download" class="md-fab md-primary" aria-label="Download Resume">
+            <md-tooltip
+              md-direction="left">
+              Download Resume
+            </md-tooltip>
+            <i class="material-icons white600">get_app</i>
+          </md-button>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-content>
 </body>
 </html>
