@@ -1,7 +1,11 @@
 /*CSS sandbox*/
 
-body{
-	background: #FFF;
+#MainContainer{
+	background: url("img/bg.jpeg") no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #body{
 	width: 80%;
@@ -20,7 +24,14 @@ h1{
 .carddemoBasicUsage .card-media {
   background-color: #999999; }
 
-.material-icons.orange600 { color: #FB8C00; }
+.material-icons.orange600 {
+  color: #FB8C00;
+  font-size: 30px;
+}
+.material-icons.white600 {
+  color: white;
+  font-size: 30px;
+}
 
 #main-tile{
   padding-top: 150px;
@@ -28,6 +39,8 @@ h1{
 }
 #main-tile md-card{
   width: 485px;
+  background-image: url("img/texture-small.jpg");
+  background-repeat:repeat;
 }
 
 .md-headline {
@@ -54,6 +67,14 @@ md-card-title-text span{
 
 .my-discription{
   text-align: center;
+  margin: auto;
+  width: 384px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.md-icon-button{
+  margin: auto;
 }
 
 .md-user-avatar{
@@ -64,4 +85,8 @@ md-card-title-text span{
   width: 200px;
   border-radius: 50%;
   border:7px solid #fafafa;
+}
+
+#download{
+  margin: auto;
 }

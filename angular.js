@@ -2,9 +2,9 @@ angular.module('HomePage', ['ngMaterial'])
 
 .controller('AppCtrl', function($scope) {
   $scope.imagePath = 'img/washedout.png';
-  $scope.header = "Hi, i'm Dustin Downing";
+  $scope.header = "Hi, i'm Dustin Downing!";
   $scope.subHeader = "Full Stack Web Developer";
-  $scope.discription = "Freelance software developer in the Austin, TX area."
+  $scope.discription = "Freelance software engineer in the Austin, TX area specializing in web application business solutions."
 
 })
 .config(function($mdThemingProvider) {
