@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../animate.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -13,37 +14,274 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 	<!-- bootstrap js file must be loaded after the jquery above -->
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="./angular.js"></script>
 	<script type="text/javascript">
 	// sandbox for javascript code
 
+    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Language');
+        data.addColumn('number', 'Knowledge');
+        data.addRows([
+        ['PHP', 5],
+        ['HTML', 5],
+        ['CSS', 4],
+        ['Javascript', 4],
+        ['Bash', 4],
+        ['AngularJS', 3],
+        ['Ruby', 2],
+        ['Python', 1],
+      ]);
+
+      var options = {
+        title: 'Languages',
+        legend: 'none',
+        width:450,
+        height:300,
+        hAxis: { ticks: [0, 1,2,3,4, 5] }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
 	</script>
 </head>
 
 <body ng-app="HomePage" ng-controller="AppCtrl" ng-cloak >
   <md-content id="MainContainer" layout="row">
     <div id="main-tile">
-      <md-card md-theme="'dark-grey'" class=".md-whiteframe-14dp" md-theme-watch>
-        <img class="md-user-avatar" src="img/profile.jpg"/>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{header}}</span>
-            <span class="md-subhead">{{subHeader}}</span>
-          </md-card-title-text>
-        </md-card-title>
-        <div class="my-divider"></div>
-        <span class="my-discription">{{discription}}</span>
-        <div class="my-divider"></div>
-        <md-card-content layout="row" layout-align="space-between">
-          <md-button id="download" class="md-fab md-primary" aria-label="Download Resume">
-            <md-tooltip
-              md-direction="left">
-              Download Resume
-            </md-tooltip>
-            <i class="material-icons white600">get_app</i>
-          </md-button>
-        </md-card-content>
+      <md-card class=".md-whiteframe-14dp animated fadeInDownBig" md-theme-watch>
+        <md-tabs md-dynamic-height>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Profile
+              </md-tooltip>
+              <i class="material-icons">face</i>
+            </md-tab-label>
+            <md-tab-body>
+              <img class="md-user-avatar" src="img/profile.jpg"/>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">{{header}}</span>
+                  <span class="md-subhead">{{subHeader}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <div class="my-divider"></div>
+              <div class="dialog">
+                <span class="my-discription">{{discription}}</span>
+              </div>
+              <div class="my-divider"></div>
+              <md-card-content layout="row" layout-align="space-between">
+                <md-button id="download" class="md-fab md-primary" aria-label="Download Resume">
+                  <md-tooltip
+                    md-direction="left">
+                    Download Resume
+                  </md-tooltip>
+                  <i class="material-icons white600">get_app</i>
+                </md-button>
+              </md-card-content>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                My Skills
+              </md-tooltip>
+              <i class="material-icons">list</i>
+            </md-tab-label>
+            <md-tab-body>
+              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Servies</span>
+              <div class="my-divider"></div>
+
+              <div layout="row" layout-padding layout-wrap style="padding-bottom: 32px;" ng-cloak>
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="node-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Node.js
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="http://nodejs.org">
+                    <img class="skill-img" src="/img/icons/nodejs-logo.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="ruby-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Ruby on Rails
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="http://rubyonrails.org/">
+                    <img class="skill-img" src="/img/icons/ruby.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="aws-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Amazon Web Services
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="https://aws.amazon.com/">
+                    <img class="skill-img" src="/img/icons/aws.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="wercker-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Wercker
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="http://www.wercker.com/">
+                    <img class="skill-img" src="/img/icons/wercker.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="grunt-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Grunt Task Runner
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="http://gruntjs.com/">
+                    <img class="skill-img" src="/img/icons/grunt.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="wordpress-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Wordpress
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="https://wordpress.com/">
+                    <img class="skill-img" src="/img/icons/wordpress.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="material-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Material Design
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="https://material.io/">
+                    <img class="skill-img" src="/img/icons/material.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="bootstrap-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Bootstrap
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="http://getbootstrap.com/">
+                    <img class="skill-img" src="/img/icons/bootstrap.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+
+              </div>
+
+
+              <div layout="row" layout-padding layout-wrap ng-cloak>
+                <div id="chart_div"></div>
+              </div>
+              <div layout="row" layout-padding layout-wrap style="display: none;" ng-cloak>
+
+                <div class="progress-bar">
+                  <span>HTML</span>
+                </div>
+
+                <div class="progress-bar">
+                  <span>CSS</span>
+                </div>
+
+                <div class="progress-bar">
+                  <span>Javascript</span>
+                </div>
+
+                <div class="progress-bar">
+                  <span>jQuery</span>
+                </div>
+
+                <div class="progress-bar">
+                  <span>PHP</span>
+                </div>
+
+              </div>
+
+            </md-tab-body>
+          </md-tab>
+          <!-- <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Projects
+              </md-tooltip>
+              <i class="material-icons">code</i>
+            </md-tab-label>
+            <md-tab-body>
+              projects
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Lighting Designer
+              </md-tooltip>
+              <i class="material-icons">lightbulb_outline</i>
+            </md-tab-label>
+            <md-tab-body>
+              car hobby
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Dog
+              </md-tooltip>
+              <i class="material-icons">pets</i>
+            </md-tab-label>
+            <md-tab-body>
+              car hobby
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Car
+              </md-tooltip>
+              <i class="material-icons">directions_car</i>
+            </md-tab-label>
+            <md-tab-body>
+              car hobby
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Boyfriend
+              </md-tooltip>
+              <i class="material-icons">weekend</i>
+            </md-tab-label>
+            <md-tab-body>
+              car hobby
+            </md-tab-body>
+          </md-tab> -->
+
+        </md-tabs>
       </md-card>
+    </div>
+    <div class="list-icons">
+
     </div>
   </md-content>
 </body>
