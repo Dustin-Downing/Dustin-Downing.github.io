@@ -35,11 +35,11 @@
         ['Bash', 4],
         ['AngularJS', 3],
         ['Ruby', 2],
+        ['Java', 2],
         ['Python', 1],
       ]);
 
       var options = {
-        title: 'Languages',
         legend: 'none',
         width:450,
         height:300,
@@ -79,8 +79,8 @@
                 <span class="my-discription">{{discription}}</span>
               </div>
               <div class="my-divider"></div>
-              <md-card-content layout="row" layout-align="space-between">
-                <md-button id="download" class="md-fab md-primary" aria-label="Download Resume">
+              <md-card-content layout="row" layout-align="center">
+                <md-button href="DustinDowning.pdf" download="HireDustinDowning.pdf" class="md-fab md-primary" aria-label="Download Resume">
                   <md-tooltip
                     md-direction="left">
                     Download Resume
@@ -186,32 +186,11 @@
 
               </div>
 
+              <div class="my-divider"></div>
+              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Languages</span>
 
               <div layout="row" layout-padding layout-wrap ng-cloak>
                 <div id="chart_div"></div>
-              </div>
-              <div layout="row" layout-padding layout-wrap style="display: none;" ng-cloak>
-
-                <div class="progress-bar">
-                  <span>HTML</span>
-                </div>
-
-                <div class="progress-bar">
-                  <span>CSS</span>
-                </div>
-
-                <div class="progress-bar">
-                  <span>Javascript</span>
-                </div>
-
-                <div class="progress-bar">
-                  <span>jQuery</span>
-                </div>
-
-                <div class="progress-bar">
-                  <span>PHP</span>
-                </div>
-
               </div>
 
             </md-tab-body>
