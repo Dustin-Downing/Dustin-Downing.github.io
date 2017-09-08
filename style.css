@@ -33,6 +33,9 @@ h1{
   font-size: 30px;
 	padding-top: 0.4em;
 }
+.dialog{
+	text-align: center;
+}
 
 #main-tile{
   padding-top: 100px;
@@ -95,6 +98,7 @@ md-card-title-text span{
 }
 
 .skill-tile{
+	border-radius: 15px;
 	padding: 0;
 	margin: 13px 13px 18px 13px;
 	height: 90px;
@@ -102,6 +106,7 @@ md-card-title-text span{
 }
 
 .skill-img{
+	border-radius: 15px;
 	height: 75px;
 }
 
@@ -126,9 +131,10 @@ md-card-title-text span{
 #material-skill{
 	background: #1b39a8;
 }
-#bootstrap-skill img{
-	height: 90px;
+#angular-skill{
+	background: #f14c48;
 }
 #services-title {
 	margin-top: 15px;
+	margin-bottom: 15px;
 }

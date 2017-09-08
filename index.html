@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="/img/icons/face.png">
   <link rel="stylesheet" href="../animate.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <!-- Google analytics code -->
@@ -28,7 +29,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="./angular.js"></script>
-  <script src="//load.sumome.com/" data-sumo-site-id="6fc89a7eb043f2c60f68a6422d1c91d098872c198159f8825c42a63274a0ce7c" async="async"></script>
 	<script type="text/javascript">
 	// sandbox for javascript code
 
@@ -45,8 +45,8 @@
         ['HTML', 5],
         ['CSS', 4],
         ['Javascript', 4],
+        ['TypeScript', 4],
         ['Bash', 4],
-        ['AngularJS', 3],
         ['Ruby', 2],
         ['Java', 2],
         ['Python', 1],
@@ -69,7 +69,7 @@
 <body ng-app="HomePage" ng-controller="AppCtrl" ng-cloak >
   <md-content id="MainContainer" layout="row">
     <div id="main-tile">
-      <md-card class=".md-whiteframe-14dp animated fadeInDownBig" md-theme-watch>
+      <md-card class=".md-whiteframe-14dp animated fadeInDownBig" md-theme-watch style="border-radius: 5px;">
         <md-tabs md-dynamic-height>
           <md-tab>
             <md-tab-label>
@@ -109,10 +109,10 @@
                 md-direction="bottom">
                 My Skills
               </md-tooltip>
-              <i class="material-icons">list</i>
+              <i class="material-icons">apps</i>
             </md-tab-label>
             <md-tab-body>
-              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Servies</span>
+              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Frameworks</span>
               <div class="my-divider"></div>
 
               <div layout="row" layout-padding layout-wrap style="padding-bottom: 32px;" ng-cloak>
@@ -126,13 +126,13 @@
                   </a>
                 </md-whiteframe>
 
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="ruby-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="angular-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Ruby on Rails
+                    Angular 2+
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="http://rubyonrails.org/">
-                    <img class="skill-img" src="/img/icons/ruby.png" alt="">
+                  <a class="md-ink-ripple" href="https://angular.io/">
+                    <img class="skill-img" src="/img/icons/angular2-icon.png" alt="">
                   </a>
                 </md-whiteframe>
 
@@ -186,26 +186,34 @@
                   </a>
                 </md-whiteframe>
 
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="bootstrap-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="ruby-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Bootstrap
+                    Ruby on Rails
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="http://getbootstrap.com/">
-                    <img class="skill-img" src="/img/icons/bootstrap.png" alt="">
+                  <a class="md-ink-ripple" href="http://rubyonrails.org/">
+                    <img class="skill-img" src="/img/icons/ruby.png" alt="">
                   </a>
                 </md-whiteframe>
-
-
               </div>
+            </md-tab-body>
+          </md-tab>
 
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Launguages
+              </md-tooltip>
+              <i class="material-icons" style="width: 24px;">code-tags</i>
+            </md-tab-label>
+            <md-tab-body>
+              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Language Experiance</span>
               <div class="my-divider"></div>
-              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Languages</span>
 
               <div layout="row" layout-padding layout-wrap ng-cloak>
                 <div id="chart_div"></div>
               </div>
-
             </md-tab-body>
           </md-tab>
           <!-- <md-tab>
