@@ -119,6 +119,9 @@ md-card-title-text span{
 #aws-skill{
 	background: #fbca8d;
 }
+#aws-skill .skill-img{
+	height: 90px;
+}
 #wercker-skill img{
 	height: 90px;
 }
@@ -137,4 +140,16 @@ md-card-title-text span{
 #services-title {
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+#react-skill {
+	background: #282828;
+}
+#react-skill .skill-img{
+	height: 90px;
+}
+#webpack-skill {
+	background: #fefefe;
+}
+#jenkins-skill {
+	background: #618399;
 }
