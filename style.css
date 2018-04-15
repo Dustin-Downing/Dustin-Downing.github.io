@@ -7,6 +7,27 @@
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+	.maincard {
+		width: 100%;
+	}
+
+	.md-headline {
+    font-size: 7rem;
+	}
+	.md-subhead {
+		font-size: 3rem;
+		padding-top: 4rem;
+	}
+	.md-subhead {
+		font-size: 3rem;
+	}
+
+	.material-icons {
+		font-size: 5rem;
+	}
+}
+
 #body{
 	width: 80%;
 	background: #DCD9D9;

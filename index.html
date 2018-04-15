@@ -69,7 +69,7 @@
 <body ng-app="HomePage" ng-controller="AppCtrl" ng-cloak >
   <md-content id="MainContainer" layout="row">
     <div id="main-tile">
-      <md-card class=".md-whiteframe-14dp animated fadeInDownBig" md-theme-watch style="border-radius: 5px;">
+      <md-card class=".md-whiteframe-14dp animated fadeInDownBig maincard" md-theme-watch style="border-radius: 5px;">
         <md-tabs md-dynamic-height>
           <md-tab md-stretch-tabs="auto">
             <md-tab-label>
@@ -248,7 +248,7 @@
             </md-tab-body>
           </md-tab>
 
-          <md-tab md-autoselect="true" md-stretch-tabs="auto">
+          <md-tab md-autoselect md-stretch-tabs="auto">
             <md-tab-label>
               <md-tooltip
                 md-direction="bottom">
