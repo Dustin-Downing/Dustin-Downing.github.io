@@ -43,8 +43,8 @@
         data.addRows([
         ['PHP', 5],
         ['HTML', 5],
-        ['CSS', 4],
-        ['Javascript', 4],
+        ['CSS', 5],
+        ['Javascript', 5],
         ['TypeScript', 4],
         ['Bash', 4],
         ['Ruby', 2],
@@ -236,7 +236,7 @@
                 md-direction="bottom">
                 Launguages
               </md-tooltip>
-              <i class="material-icons" style="width: 24px;">code-tags</i>
+              <i class="material-icons" style="width: 24px;">code</i>
             </md-tab-label>
             <md-tab-body>
               <span layout="row" layout-align="center" class="md-subhead" id="services-title">Language Experiance</span>
@@ -245,6 +245,37 @@
               <div layout="row" layout-padding layout-wrap ng-cloak>
                 <div id="chart_div"></div>
               </div>
+            </md-tab-body>
+          </md-tab>
+
+          <md-tab>
+            <md-tab-label>
+              <md-tooltip
+                md-direction="bottom">
+                Ebook
+              </md-tooltip>
+              <i class="material-icons" style="width: 24px;">accessibility</i>
+            </md-tab-label>
+            <md-tab-body>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">Howdy Gibbs!</span>
+                </md-card-title-text>
+              </md-card-title>
+              <div class="my-divider"></div>
+              <div class="dialog">
+                <span class="my-discription">Thanks again for all the hospitality during our visit to the states!  If you click the blue download button below you'll download a copy of the sapiens audio book!  Also, Graeme <a href='https://www.dancarlin.com/hardcore-history-series/'>here's the link to that history podcast we talked about.</a> It's basically an audiobook, I think you'll enjoy it.</span>
+              </div>
+              <div class="my-divider"></div>
+              <md-card-content layout="row" layout-align="center">
+                <md-button href="https://drive.google.com/uc?export=download&id=13gtGOLMNuOlc-CEVeogA7Mx1VZ9vrp3R" download="sapiens.zip" class="md-fab md-primary" onclick="ga('send','event','PDF','Download','Ebook');" aria-label="Download eBook">
+                  <md-tooltip
+                    md-direction="left">
+                    Download Book
+                  </md-tooltip>
+                  <i class="material-icons white600">get_app</i>
+                </md-button>
+              </md-card-content>
             </md-tab-body>
           </md-tab>
           <!-- <md-tab>
