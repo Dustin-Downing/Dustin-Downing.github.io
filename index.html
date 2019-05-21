@@ -90,15 +90,17 @@
               <div class="my-divider"></div>
               <div class="dialog">
                 <span class="my-discription">{{discription}}</span>
+                <br/>
+                Checkout my resume!
               </div>
               <div class="my-divider"></div>
               <md-card-content layout="row" layout-align="center">
-                <md-button href="DustinDowning.pdf" download="HireDustinDowning.pdf" class="md-fab md-primary" onclick="ga('send','event','PDF','Download','Resume');" aria-label="Download Resume">
+                <md-button href="DustinDowning.pdf" target="_blank" class="md-fab md-primary" onclick="ga('send','event','PDF','Download','Resume');" aria-label="Download Resume">
                   <md-tooltip
                     md-direction="left">
-                    Download Resume
+                    Open Resume
                   </md-tooltip>
-                  <i class="material-icons white600">get_app</i>
+                  <i class="material-icons white600">open_in_new</i>
                 </md-button>
               </md-card-content>
             </md-tab-body>
@@ -112,17 +114,27 @@
               <i class="material-icons">apps</i>
             </md-tab-label>
             <md-tab-body>
-              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Frameworks</span>
+              <span layout="row" layout-align="center" class="md-subhead" id="services-title">Technologies</span>
               <div class="my-divider"></div>
 
               <div layout="row" layout-padding layout-wrap style="padding-bottom: 32px;" ng-cloak>
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="node-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="ruby-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Node.js
+                    Ruby on Rails
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="http://nodejs.org">
-                    <img class="skill-img" src="/img/icons/nodejs-logo.png" alt="">
+                  <a class="md-ink-ripple" href="http://rubyonrails.org/">
+                    <img class="skill-img" src="/img/icons/ruby.png" alt="">
+                  </a>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="vue-skill" layout layout-align="center center">
+                  <md-tooltip
+                    md-direction="bottom">
+                    Vue.js
+                  </md-tooltip>
+                  <a class="md-ink-ripple" href="https://vuejs.org/">
+                    <img class="skill-img" src="/img/icons/vue.png" alt="">
                   </a>
                 </md-whiteframe>
 
@@ -146,43 +158,33 @@
                   </a>
                 </md-whiteframe>
 
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="wordpress-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="node-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Wordpress
+                    Node.js
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="https://wordpress.com/">
-                    <img class="skill-img" src="/img/icons/wordpress.png" alt="">
+                  <a class="md-ink-ripple" href="http://nodejs.org">
+                    <img class="skill-img" src="/img/icons/nodejs-logo.png" alt="">
                   </a>
                 </md-whiteframe>
 
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="ruby-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="nuxt-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Ruby on Rails
+                    Nuxt.js
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="http://rubyonrails.org/">
-                    <img class="skill-img" src="/img/icons/ruby.png" alt="">
+                  <a class="md-ink-ripple" href="https://nuxtjs.org/">
+                    <img class="skill-img" src="/img/icons/nuxtjs.png" alt="">
                   </a>
                 </md-whiteframe>
 
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="webpack-skill" layout layout-align="center center">
+                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="serverless-skill" layout layout-align="center center">
                   <md-tooltip
                     md-direction="bottom">
-                    Webpack
+                    Serverless
                   </md-tooltip>
-                  <a class="md-ink-ripple" href="https://webpack.js.org/">
-                    <img class="skill-img" src="/img/icons/webpack.png" alt="">
-                  </a>
-                </md-whiteframe>
-
-                <md-whiteframe class="md-whiteframe-3dp skill-tile" id="jenkins-skill" layout layout-align="center center">
-                  <md-tooltip
-                    md-direction="bottom">
-                    Jekins
-                  </md-tooltip>
-                  <a class="md-ink-ripple" href="https://jenkins.io/">
-                    <img class="skill-img" src="/img/icons/jekins.png" alt="">
+                  <a class="md-ink-ripple" href="https://serverless.com/">
+                    <img class="skill-img" src="/img/icons/serverless.png" alt="">
                   </a>
                 </md-whiteframe>
 
@@ -230,7 +232,7 @@
             </md-tab-body>
           </md-tab>
 
-          <md-tab md-stretch-tabs="auto">
+          <!-- <md-tab md-stretch-tabs="auto">
             <md-tab-label>
               <md-tooltip
                 md-direction="bottom">
@@ -246,7 +248,7 @@
                 <div id="chart_div"></div>
               </div>
             </md-tab-body>
-          </md-tab>
+          </md-tab> -->
 
           <!-- <md-tab md-autoselect md-stretch-tabs="auto">
             <md-tab-label>

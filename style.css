@@ -168,9 +168,16 @@ md-card-title-text span{
 #react-skill .skill-img{
 	height: 90px;
 }
-#webpack-skill {
-	background: #fefefe;
+#nuxt-skill {
+	background: #fff;
 }
-#jenkins-skill {
-	background: #618399;
+#vue-skill {
+	background: #93e1bf;
+}
+#vue-skill .skill-img {
+	border-radius: 0;
+  height: 50px;
+}
+#serverless-skill {
+	background: #fd5750;
 }
